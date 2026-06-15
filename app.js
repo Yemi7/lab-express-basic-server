@@ -21,23 +21,23 @@ app.use(morgan('dev'))
 // ROUTES
 // Start defining your routes here:
 
-app.get('/', (req, res) => {
+app.get('/', (req,res) => {
   res.sendFile(`${__dirname}/views/home.html`)
 })
 
-app.get('/blog', (req, res) => {
+app.get('/blog', (req,res) => {
   res.sendFile(`${__dirname}/views/blog.html`)
 })
 
 const projects = require('./data/projects.json')
 
-app.get('/api/projects', (req, res) => {
+app.get('/api/projects', (req,res) => {
   res.json(projects)
 })
 
 const articles = require('./data/articles.json')
 
-app.get('/api/articles', (req, res) => {
+app.get('/api/articles', (req,res) => {
   res.json(articles)
 })
 
